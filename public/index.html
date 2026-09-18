@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mood Ink — write it, feel it</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="page">
+    <header class="masthead">
+      <span class="mark">Mood Ink</span>
+      <p class="tagline">Write a few lines about how your day's going. The ink settles into whatever you're actually feeling.</p>
+    </header>
+
+    <section class="composer">
+      <textarea
+        id="entry"
+        placeholder="Aaj kuch kaam bahut acha hua, mann bilkul khush hai..."
+        rows="6"
+        maxlength="600"
+      ></textarea>
+      <div class="composer-footer">
+        <span id="charCount" class="char-count">0 / 600</span>
+        <button id="analyzeBtn" type="button">Read the mood</button>
+      </div>
+    </section>
+
+    <section id="result" class="result" hidden>
+      <div class="result-main">
+        <span id="resultEmoji" class="result-emoji">🙂</span>
+        <div class="result-text">
+          <h2 id="resultMood">—</h2>
+          <p id="resultReason" class="result-reason"></p>
+        </div>
+      </div>
+      <div id="gifWrap" class="gif-wrap" hidden>
+        <img id="resultGif" alt="A GIF matching the detected mood">
+        <p id="gifCredit" class="gif-credit">via GIPHY</p>
+      </div>
+    </section>
+
+    <section id="errorBox" class="error-box" hidden></section>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
