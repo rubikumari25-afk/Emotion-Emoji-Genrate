@@ -311,6 +311,10 @@ app.post('/api/analyze', async (req, res) => {
   }
 });
 
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/public/index.html');
+});
+
 
 app.get('/api/health', (req, res) => {
 
